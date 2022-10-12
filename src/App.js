@@ -55,13 +55,15 @@ function App() {
 		const value = calc.slice(0, -1);
 
 		setCalc(value);
+
 	}
+
 
 	return (
 		<div className="App">
 			<div className="calculator">
 				<div className="display">
-					{result ? <span>({result})</span> : ''}
+          {result ? <span>({result})</span> : ''}
 					&nbsp;
 					{calc || "0" }
 				</div>
@@ -72,8 +74,11 @@ function App() {
 				<button onClick={ () => updateCalc('+')}>+</button>
 				<button onClick={ () => updateCalc('-')}>-</button>
 
-				<button onClick={deleteLast}>DEL</button>
+				<button onClick={deleteLast}>CLR</button>
+
+
 			</div>
+
 
 			<div className="digits">
 				{ createDigits() }
